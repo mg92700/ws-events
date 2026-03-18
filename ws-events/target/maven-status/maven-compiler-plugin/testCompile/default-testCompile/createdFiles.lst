@@ -1,0 +1,3 @@
+com\example\wsevents\EventControllerIT.class
+com\example\wsevents\AuthControllerIT.class
+com\example\wsevents\FullFlowIT.class
