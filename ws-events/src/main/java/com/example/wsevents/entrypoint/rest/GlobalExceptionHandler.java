@@ -16,6 +16,11 @@ public class GlobalExceptionHandler {
 
     private static final Logger log = LoggerFactory.getLogger(GlobalExceptionHandler.class);
 
+    /**
+     *
+     * @param ex
+     * @return
+     */
     @ExceptionHandler(IllegalArgumentException.class)
     public ProblemDetail handleIllegalArgument(IllegalArgumentException ex) {
         log.warn("Requête invalide : {}", ex.getMessage());
