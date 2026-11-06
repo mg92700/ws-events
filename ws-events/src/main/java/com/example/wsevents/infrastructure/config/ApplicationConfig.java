@@ -11,7 +11,7 @@ import com.example.wsevents.infrastructure.persistence.repository.EventMessageJp
 import com.example.wsevents.infrastructure.websocket.EventWebSocketHandler;
 import com.example.wsevents.infrastructure.websocket.WebSocketEventPublisher;
 import com.example.wsevents.infrastructure.websocket.WebSocketSessionRegistry;
-import com.fasterxml.jackson.databind.ObjectMapper;
+import tools.jackson.databind.ObjectMapper;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 

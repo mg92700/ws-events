@@ -2,7 +2,8 @@ package com.example.wsevents.infrastructure.websocket;
 
 import com.example.wsevents.domain.model.EventMessage;
 import com.example.wsevents.domain.port.out.EventPublisherPort;
-import com.fasterxml.jackson.databind.ObjectMapper;
+import tools.jackson.core.JacksonException;
+import tools.jackson.databind.ObjectMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.socket.TextMessage;
@@ -60,7 +61,7 @@ public class WebSocketEventPublisher implements EventPublisherPort {
                     "owner",     event.getOwner()
             );
             return objectMapper.writeValueAsString(payload);
-        } catch (IOException e) {
+        } catch (JacksonException e) {
             log.error("Échec sérialisation événement id={}", event.getId(), e);
             return null;
         }
